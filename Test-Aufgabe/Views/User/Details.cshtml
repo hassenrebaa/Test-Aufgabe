@@ -1,0 +1,51 @@
+﻿@model Test_Aufgabe.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Vielen Danke für Ihre Anmeldung</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Geburtsdatum)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Geburtsdatum)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Passwort)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Passwort)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Passwortwiederholung)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Passwortwiederholung)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
