@@ -18,7 +18,7 @@ namespace Test_Aufgabe.Models.Repositories
         // Create Methode 
         public void Add(User entity)
         {
-            entity.id = users.Max(b => b.id) + 1;
+          
             users.Add(entity);
 
         }
