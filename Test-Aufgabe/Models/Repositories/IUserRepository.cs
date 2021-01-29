@@ -9,7 +9,7 @@ namespace Test_Aufgabe.Models.Repositories
     {
         IList<TEntity> List();
         TEntity Find(int id);
-        void Add(TEntity entity);
+        void Add(TEntity entity, int id);
     
     }
 }

@@ -9,7 +9,7 @@ namespace Test_Aufgabe.Models
 {
     public class User
     {
-        //public readonly int id = 1;
+        
         public int id { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Name ist erförderlich ")]
@@ -28,7 +28,7 @@ namespace Test_Aufgabe.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Passwort ist erförderlich ")]
         [DataType(DataType.Password)]
         [MinLength(8, ErrorMessage = "Mindestens 8 Zeichen mit mindestens zwei Ziffern ")]
-        [RegularExpression(@".*([@$!%*#_*?&]{2,})", ErrorMessage = "Passwort muss mindestens 2 zifferen inhalten")]
+        [RegularExpression(@".*[@$!%*#_*?&]{2,}.*", ErrorMessage = "Passwort muss mindestens 2 zifferen inhalten")]
         public string Passwort { get; set; }
         [Display(Name = "Passwortwiederholung")]
         [DataType(DataType.Password)]

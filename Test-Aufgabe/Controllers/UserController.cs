@@ -40,19 +40,19 @@ namespace Test_Aufgabe.Controllers
         // POST: UserController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(User user)
+        public ActionResult Create(User user, int id)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    UserRepository.Add(user);
+                    UserRepository.Add(user,1);
+                    
                     var newuser = user.id;
-                    var k = UserRepository.List().Max(b=>b.id);
-                    if(k== newuser)
-                    {
+                    
+                   
                         return RedirectToAction(nameof(Details), new { id = newuser });
-                    }
+                   
                     
                 }
                 catch

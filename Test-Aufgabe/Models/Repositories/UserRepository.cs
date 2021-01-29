@@ -16,16 +16,16 @@ namespace Test_Aufgabe.Models.Repositories
        
         }
         // Create Methode 
-        public void Add(User entity)
+        public void Add(User entity, int id)
         {
-          
+            entity.id =id+ 1;
             users.Add(entity);
 
         }
        
         public User Find(int id)
         {
-            var user = users.SingleOrDefault(b => b.id == id);
+            var user = users.Where(b => b.id == id).First();
             return user;
         }
 
